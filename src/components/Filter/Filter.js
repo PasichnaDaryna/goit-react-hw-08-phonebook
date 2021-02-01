@@ -22,9 +22,4 @@ const Filter = () => {
   );
 };
 
-// const mapStateToProps = state => (
-//   {
-//     value: state.contacts.filter,
-//   });
-
 export default Filter;

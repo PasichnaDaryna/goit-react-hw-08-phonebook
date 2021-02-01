@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 
-import { getContacts } from '../../redux/contacts/contacts-selectors';
+import { getAllContacts } from '../../redux/contacts/contacts-selectors';
 
 import { toast } from 'react-toastify';
 import * as ContactOperations from '../../redux/contacts/contacts-operations';
@@ -11,7 +11,7 @@ import '../Form/Form.css';
 
 function Form() {
   const dispatch = useDispatch();
-  const contacts = useSelector(getContacts);
+  const contacts = useSelector(getAllContacts);
   const [name, setName] = useState('');
   const [number, setNumber] = useState('');
 

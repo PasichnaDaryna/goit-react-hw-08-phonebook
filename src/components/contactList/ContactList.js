@@ -4,9 +4,9 @@ import * as ContactOperations from '../../redux/contacts/contacts-operations';
 import { getVisibleContacts } from '../../redux/contacts/contacts-selectors';
 
 export default function ContactList() {
-  const dispatch = useDispatch();
   const visibleContacts = useSelector(getVisibleContacts);
-  // const contacts = useSelector(getContacts);
+  const dispatch = useDispatch();
+
   const onDeleteContact = id => dispatch(ContactOperations.deleteContact(id));
 
   return (

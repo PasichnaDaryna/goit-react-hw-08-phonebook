@@ -3,23 +3,29 @@ import './App.css';
 import { Component } from 'react';
 // import shortid from 'shortid';
 import Container from './components/Container/Container';
-import Form from './components/Form/Form';
-import Filter from './components/Filter/Filter.js';
-import ContactList from './components/contactList/ContactList';
-import { ToastContainer } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import ContactsView from './views/ContactsView';
+import HomeView from './views/Homepage';
+import RegisterView from './views/RegisterView';
+import LoginView from './views/LoginView';
+import AppBar from './components/AppBar';
+import { Switch, Route } from 'react-router-dom';
+import ErrorBoundary from './components/ErrorBoundary/ErrorBoundary';
 
 class App extends Component {
   render() {
     return (
-      <Container>
-        <h1>Phonebook</h1>
-        <Form />
-        <h2>Contacts</h2>
-        <Filter />
-        <ContactList />
-        <ToastContainer autoClose={5000} />
-      </Container>
+      <ErrorBoundary>
+        <Container>
+          <AppBar />
+
+          <Switch>
+            <Route exact path="/" component={HomeView} />
+            <Route path="/register" component={RegisterView} />
+            <Route path="/login" component={LoginView} />
+            <Route path="/contacts" component={ContactsView} />
+          </Switch>
+        </Container>
+      </ErrorBoundary>
     );
   }
 }

@@ -7,10 +7,11 @@ const styles = {
     textDecoration: 'none',
     padding: 12,
     fontWeight: 700,
-    color: '#2A363B',
+    fontSize: 20,
+    color: 'pink',
   },
   activeLink: {
-    color: '#E84A5F',
+    color: 'purple',
   },
 };
 

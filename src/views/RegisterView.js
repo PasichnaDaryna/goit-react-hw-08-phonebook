@@ -6,10 +6,35 @@ const styles = {
   form: {
     width: 320,
   },
+  header: {
+    color: 'purple',
+    fontSize: 20,
+  },
   label: {
     display: 'flex',
     flexDirection: 'column',
     marginBottom: 15,
+    fontSize: '20px',
+    color: 'purple',
+    fontWeight: 700,
+  },
+  input: {
+    width: '100 %',
+    padding: '12px',
+    border: '1px solid #ccc',
+    borderRadius: '4px',
+    boxSizing: 'border-box',
+    marginTop: '6px',
+    marginBottom: '16px',
+    resize: 'vertical',
+  },
+  button: {
+    backgroundColor: 'white',
+    color: ' purple',
+    padding: '12px 20px',
+    border: 'none',
+    borderRadius: '4px',
+    cursor: 'pointer',
   },
 };
 
@@ -42,35 +67,45 @@ export default function RegisterView() {
 
   return (
     <div>
-      <h1>Страница регистрации</h1>
+      <h1 style={styles.header}>☛ Signup page</h1>
 
       <form onSubmit={handleSubmit} style={styles.form} autoComplete="off">
         <label style={styles.label}>
-          Имя
-          <input type="text" name="name" value={name} onChange={handleChange} />
+          Name
+          <input
+            type="text"
+            name="name"
+            style={styles.input}
+            value={name}
+            onChange={handleChange}
+          />
         </label>
 
         <label style={styles.label}>
-          Почта
+          Email
           <input
             type="email"
             name="email"
+            style={styles.input}
             value={email}
             onChange={handleChange}
           />
         </label>
 
         <label style={styles.label}>
-          Пароль
+          Password
           <input
             type="password"
             name="password"
             value={password}
+            style={styles.input}
             onChange={handleChange}
           />
         </label>
 
-        <button type="submit">Зарегистрироваться</button>
+        <button type="submit" style={styles.button}>
+          Signup
+        </button>
       </form>
     </div>
   );

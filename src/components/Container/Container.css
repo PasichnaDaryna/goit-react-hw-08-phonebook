@@ -4,7 +4,7 @@ body {
   font-size: 12px;
   line-height: 30px;
   color: #777;
-  background: #4caf50;
+  background-image: url(https://images.unsplash.com/photo-1612107529116-6b0c1497c9a7?crop=entropy&cs=srgb&fm=jpg&ixid=MXwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHw&ixlib=rb-1.2.1&q=85);
 }
 
 input[type='text'],
@@ -17,7 +17,7 @@ button[type='submit'] {
 }
 
 .container {
-  max-width: 400px;
+  max-width: 800px;
   width: 100%;
   margin: 0 auto;
   position: relative;

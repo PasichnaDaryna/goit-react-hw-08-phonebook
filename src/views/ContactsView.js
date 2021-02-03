@@ -1,11 +1,11 @@
-import { useState, useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
 
 import ContactList from '../components/contactList/ContactList';
 import Form from '../components/Form/Form';
-import Container from '../components/Container/Container';
+
 import Filter from '../components/Filter/Filter';
-import { ToastContainer } from 'react-toastify';
+
 import 'react-toastify/dist/ReactToastify.css';
 import { contactsOperations } from '../redux/contacts';
 

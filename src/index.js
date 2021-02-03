@@ -15,6 +15,7 @@ import reportWebVitals from './reportWebVitals';
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
+      {/* checks local storage, fill in redux state */}
       <PersistGate loading={null} persistor={persistor}>
         <BrowserRouter>
           <App />

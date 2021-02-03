@@ -22,7 +22,7 @@ li {
 }
 
 .contact-list li button {
-  background-color: #4caf50; /* Blue background */
+  background-color: purple; /* Blue background */
   border: none; /* Remove borders */
   color: white; /* White text */
   padding: 12px 16px; /* Some padding */

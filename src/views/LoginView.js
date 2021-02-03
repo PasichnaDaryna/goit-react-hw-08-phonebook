@@ -6,10 +6,36 @@ const styles = {
   form: {
     width: 320,
   },
+
+  header: {
+    color: 'purple',
+    fontSize: 20,
+  },
   label: {
     display: 'flex',
     flexDirection: 'column',
     marginBottom: 15,
+    fontSize: '20px',
+    color: 'purple',
+  },
+
+  input: {
+    width: '100 %',
+    padding: '12px',
+    border: '1px solid #ccc',
+    borderRadius: '4px',
+    boxSizing: 'border-box',
+    marginTop: '6px',
+    marginBottom: '16px',
+    resize: 'vertical',
+  },
+  button: {
+    backgroundColor: 'white',
+    color: 'purple',
+    padding: '12px 20px',
+    border: 'none',
+    borderRadius: '4px',
+    cursor: 'pointer',
   },
 };
 
@@ -38,30 +64,34 @@ export default function LoginView() {
 
   return (
     <div>
-      <h1>Страница логина</h1>
+      <h1 style={styles.header}>⍈Login page</h1>
 
       <form onSubmit={handleSubmit} style={styles.form} autoComplete="off">
         <label style={styles.label}>
-          Почта
+          Email
           <input
             type="email"
             name="email"
             value={email}
+            style={styles.input}
             onChange={handleChange}
           />
         </label>
 
         <label style={styles.label}>
-          Пароль
+          Password
           <input
             type="password"
             name="password"
+            style={styles.input}
             value={password}
             onChange={handleChange}
           />
         </label>
 
-        <button type="submit">Войти</button>
+        <button type="submit" style={styles.button}>
+          Login
+        </button>
       </form>
     </div>
   );
